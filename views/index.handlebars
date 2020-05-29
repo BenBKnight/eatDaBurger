@@ -1,25 +1,29 @@
-<h1>Burger Burger Burger!!!</h1>
+<h1 class="hero title">Burger Burger Burger!!!</h1>
+<div class="is-parent tile">
+  <section class="section notDevoured tile is-child">
+    <h2 class="subtitle">Burgers not yet Devoured!</h2>
 
-<h2>Burgers not yet Devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
       {{> burgers/burger-block eaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </section>
 
-<h2>Devoured Burgers!</h2>
+  <section class="section devoured tile is-child">
+    <h2 class="subtitle">Devoured Burgers!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
       {{> burgers/burger-block eaten=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
+      {{/if}}
+      {{/each}}
+    </ul>
+  </section>
+</div>
 <h2>Add a Burger!</h2>
 <form class="create-form">
 

@@ -17,3 +17,26 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+body{
+  text-align: center;
+}
+.notDevoured {
+  background-color: tomato;
+}
+.devoured {
+  background-color: grey;
+}
+.hero {
+  max-width: 100%;
+  max-height: 100%; 
+};
+html { 
+  background-image: url("/public/assets/images/burgerPhoto.jpg");
+
+  background-image: url("./images/burgerWithEgg.jpg");
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
