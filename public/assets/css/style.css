@@ -1,17 +1,11 @@
 li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
-}
-
-.label {
-  font-weight: bold;
+  padding: 8px;
+  margin: 8px;
 }
 
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
 }
 
 .form-group {
@@ -21,22 +15,41 @@ body{
   text-align: center;
 }
 .notDevoured {
-  background-color: tomato;
+  background-color: rgba(118, 157, 248, 0.6);
 }
 .devoured {
-  background-color: grey;
+  background-color: rgb(128, 128, 128, .6);
 }
-.hero {
-  max-width: 100%;
-  max-height: 100%; 
-};
-html { 
-  background-image: url("/public/assets/images/burgerPhoto.jpg");
-
-  background-image: url("./images/burgerWithEgg.jpg");
+html {
+  
   background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: contain;
+  background-color: black;
+}
+h1, h2, .title, .subtitle {
+  color: white;
+}
+.create-form {
+  background-color: rgba(103, 143, 108, 0.6);
+  width: 30%;
+}
+li {
+  color: white;
+}
+html, body {
+  height: 100%;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: left;
+}
+.title {
+  margin-top: 10px;
 }

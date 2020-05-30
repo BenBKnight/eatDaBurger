@@ -1,39 +1,40 @@
 const express = require("express");
-const burgerJs = require("../models/burgerModel")
+const burgerModel = require("../models/burgerModel")
 const router = express.Router();
 
 
-// Create all our routes and set up logic within those routes where required.
+// Create all our routes
+
+// Calls all data from burger table to be displayed
 router.get("/", function (req, res) {
-  burgerJs.all(function (data) {
-    var hbsObject = {
+  burgerModel.all(function (data) {
+    var burgerData = {
       burgers: data
     };
-    res.render("index", hbsObject);
+    res.render("index", burgerData);
   });
 });
-
+// Sends column name, user input, and callback to model
 router.post("/api/devoured", function (req, res) {
-  burgerJs.create([
+  burgerModel.create([
     "burger_name"
   ], [
     req.body.name
   ], function (result) {
-    // Send back the ID of the new quote
+    // Send back the ID
     res.json({ id: result.insertId });
   });
 });
-
+// Updates devoured property
 router.put("/api/devoured/:id", function (req, res) {
+  // Sets Id to be sent to model
   var condition = "id = " + req.params.id;
-
-  console.log("condition", condition);
-  burgerJs.update({
+  // Sends new devoured property, id, and callback to model 
+  burgerModel.update({
     devoured: req.body.devoured
   }, condition, function (result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
-      console.log("here")
       return res.status(404).end();
     } else {
       res.status(200).end();
