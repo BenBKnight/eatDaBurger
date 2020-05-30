@@ -18,13 +18,4 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.16.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BenBKnight/eatDaBurger.git"
-  },
-  "bugs": {
-    "url": "https://github.com/BenBKnight/eatDaBurger/issues"
-  },
-  "homepage": "https://github.com/BenBKnight/eatDaBurger#readme"
-}
+  }}
